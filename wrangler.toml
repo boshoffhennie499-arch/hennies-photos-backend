@@ -1,0 +1,18 @@
+name = "hennies-photos-backend"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hennies-photos"
+database_id = "your-database-id"
+
+[cors]
+origins = ["*"]
+methods = ["GET", "POST", "DELETE", "OPTIONS"]
+headers = ["Content-Type"]
+max_age = 86400
+allow_credentials = true
